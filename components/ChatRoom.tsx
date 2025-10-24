@@ -14,7 +14,7 @@ export default function ChatRoom({ roomId, username }: { roomId: string; usernam
   };
 
   return (
-    <div className="flex flex-col h-screen max-w-2xl mx-auto p-4">
+    <div className="flex flex-col h-screen max-w-2xl mx-auto p-4 text-gray-800">
       <div className="mb-4">
         <h1 className="text-2xl font-bold">Chat Room: {roomId}</h1>
         <p className="text-sm text-gray-600">
@@ -38,13 +38,13 @@ export default function ChatRoom({ roomId, username }: { roomId: string; usernam
         ))}
       </div>
 
-      <form onSubmit={handleSubmit} className="flex gap-2">
+      <form onSubmit={handleSubmit} className="flex gap-2 text-gray-800">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type a message..."
-          className="flex-1 border rounded-lg px-4 py-2"
+          className="flex-1 border rounded-lg px-4 py-2 text-white"
           disabled={!isConnected}
         />
         <button
